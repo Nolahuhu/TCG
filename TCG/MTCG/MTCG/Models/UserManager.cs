@@ -1,54 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace MonsterCardGame
+﻿namespace MonsterCardGame
 {
     public class UserManager
     {
         private List<User> users = new List<User>();
 
-        public bool Register(string username, string password)
-        {
-            for (int i = 0; i < users.Count; i++)
-            {
-                if (users[i].Username == username)
-                {
-                    Console.WriteLine("Benutzername existiert bereits!");
-                    return false;
-                }
-            }
-
-            users.Add(new User(username, password));
-            Console.WriteLine("Benutzer erfolgreich registriert.");
-            return true;
-        }
-
-        public bool Login(string username, string password)
-        {
-            for (int i = 0; i < users.Count; i++)
-            {
-                if (users[i].Username == username && users[i].Password == password)
-                {
-                    Console.WriteLine("Login erfolgreich. Willkommen, " + username + "!");
-                    return true;
-                }
-            }
-
-            Console.WriteLine("Ungültige Anmeldeinformationen.");
-            return false;
-        }
-
-        public void ListUsers()
-        {
-            Console.WriteLine("Registrierte Benutzer:");
-            for (int i = 0; i < users.Count; i++)
-            {
-                Console.WriteLine(users[i].Username);
-            }
-        }
-
         // Benutzer finden
-        private User FindUser(string username)
+        public User FindUser(string username)
         {
             for (int i = 0; i < users.Count; i++)
             {
@@ -60,46 +17,80 @@ namespace MonsterCardGame
             return null;
         }
 
-        // Karte zu einem Benutzer hinzufügen
-        public void AddCardToUser(string username, Card card)
+        // Kartenpaket für den Benutzer kaufen
+        public string BuyPackage(string username)
         {
             User user = FindUser(username);
-            if (user != null)
+            if (user == null)
+            {
+                return "Benutzer nicht gefunden.";
+            }
+
+            if (!user.SpendCoins(5))
+            {
+                return "Nicht genügend Münzen.";
+            }
+
+            // Erstelle ein zufälliges Kartenpaket
+            List<Card> newCards = GenerateRandomPackage();
+            foreach (var card in newCards)
             {
                 user.AddCard(card);
             }
-            else
-            {
-                Console.WriteLine("Benutzer nicht gefunden.");
-            }
+
+            return "Kartenpaket erfolgreich gekauft.";
         }
 
-        // Karte von einem Benutzer entfernen
-        public void RemoveCardFromUser(string username, string cardName)
+        // Deck aktualisieren
+        public string UpdateUserDeck(string username, List<Card> deckCards)
         {
             User user = FindUser(username);
-            if (user != null)
+            if (user == null)
             {
-                user.RemoveCard(cardName);
+                return "Benutzer nicht gefunden.";
             }
-            else
-            {
-                Console.WriteLine("Benutzer nicht gefunden.");
-            }
+
+            return user.UpdateDeck(deckCards);
         }
 
-        // Karten eines Benutzers anzeigen
-        public void ShowUserCards(string username)
+        // Benutzerdeck anzeigen
+        public List<Card> ShowUserDeck(string username)
         {
             User user = FindUser(username);
-            if (user != null)
+            if (user == null)
             {
-                user.ShowCards();
+                return null;  // Benutzer nicht gefunden
             }
-            else
+
+            return user.ShowDeck();
+        }
+
+        // Überprüfen, ob der Benutzer ein vollständiges Deck hat
+        public bool HasValidUserDeck(string username)
+        {
+            User user = FindUser(username);
+            if (user == null)
             {
-                Console.WriteLine("Benutzer nicht gefunden.");
+                return false;
             }
+
+            return user.HasValidDeck();
+        }
+
+        // Methode zur Generierung eines zufälligen Kartenpakets
+        private List<Card> GenerateRandomPackage()
+        {
+            List<Card> package = new List<Card>();
+
+            // Erstelle 5 zufällige Karten (kann verbessert werden)
+            for (int i = 0; i < 5; i++)
+            {
+                MonsterType randomType = (MonsterType)(new Random().Next(Enum.GetValues(typeof(MonsterType)).Length));
+                Card card = new Card($"RandomCard{i + 1}", new Random().Next(10, 100), "RandomElement", randomType);
+                package.Add(card);
+            }
+
+            return package;
         }
     }
 }

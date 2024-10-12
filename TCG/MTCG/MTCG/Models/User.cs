@@ -1,58 +1,82 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace MonsterCardGame
+﻿namespace MonsterCardGame
 {
     public class User
     {
         public string Username { get; set; }
         public string Password { get; set; }
         public List<Card> Cards { get; set; }  // Sammlung von Karten
+        public List<Card> Deck { get; set; }   // Bestes 4-Karten Deck
+        public int Coins { get; set; }         // Virtuelle Münzen
 
         public User(string username, string password)
         {
             Username = username;
             Password = password;
-            Cards = new List<Card>();  // Initialisiere die Liste der Karten
+            Cards = new List<Card>();
+            Deck = new List<Card>();
+            Coins = 20;  // Jeder Benutzer startet mit 20 Münzen
         }
 
         // Karte zur Sammlung hinzufügen
-        public void AddCard(Card card)
+        public string AddCard(Card card)
         {
             Cards.Add(card);
-            Console.WriteLine($"{card.Name} wurde zu {Username}'s Sammlung hinzugefügt.");
+            return $"{card.Name} wurde zu {Username}'s Sammlung hinzugefügt.";
         }
 
-        // Karte aus der Sammlung entfernen
-        public void RemoveCard(string cardName)
+        // Deck aktualisieren (beste 4 Karten)
+        public string UpdateDeck(List<Card> deckCards)
         {
-            for (int i = 0; i < Cards.Count; i++)
+            if (deckCards.Count != 4)
             {
-                if (Cards[i].Name == cardName)
+                return "Ein Deck muss genau 4 Karten enthalten.";
+            }
+
+            foreach (var card in deckCards)
+            {
+                if (!Cards.Contains(card))
                 {
-                    Console.WriteLine($"{Cards[i].Name} wurde aus {Username}'s Sammlung entfernt.");
-                    Cards.RemoveAt(i);
-                    return;
+                    return $"Die Karte {card.Name} gehört nicht zu deiner Sammlung.";
                 }
             }
-            Console.WriteLine($"{cardName} wurde nicht gefunden.");
+
+            Deck = new List<Card>(deckCards);
+            return "Deck wurde erfolgreich aktualisiert.";
         }
 
-        // Alle Karten anzeigen
-        public void ShowCards()
+        // Deck anzeigen
+        public List<Card> ShowDeck()
         {
-            Console.WriteLine($"{Username}'s Karten Sammlung:");
-            if (Cards.Count == 0)
-            {
-                Console.WriteLine("Keine Karten in der Sammlung.");
-                return;
-            }
+            return Deck;
+        }
 
-            // Karten mit einer einfachen for-Schleife anzeigen
-            for (int i = 0; i < Cards.Count; i++)
+        // Überprüfen, ob der Benutzer ein vollständiges Deck hat
+        public bool HasValidDeck()
+        {
+            return Deck.Count == 4;
+        }
+
+        // Karten anzeigen
+        public List<Card> ShowCards()
+        {
+            return Cards;
+        }
+
+        // Münzen abziehen
+        public bool SpendCoins(int amount)
+        {
+            if (Coins >= amount)
             {
-                Cards[i].DisplayCardInfo();
+                Coins -= amount;
+                return true;
             }
+            return false;
+        }
+
+        // Münzen hinzufügen
+        public void AddCoins(int amount)
+        {
+            Coins += amount;
         }
     }
 }

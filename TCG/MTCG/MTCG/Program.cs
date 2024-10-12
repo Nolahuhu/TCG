@@ -23,59 +23,61 @@ namespace MonsterCardGame
 
                 string input = Console.ReadLine();
 
-                switch (input)
-                {
-                    case "1":
-                        Console.Write("Benutzername: ");
-                        string regUsername = Console.ReadLine();
-                        Console.Write("Passwort: ");
-                        string regPassword = Console.ReadLine();
-                        userManager.Register(regUsername, regPassword);
-                        break;
-                    case "2":
-                        Console.Write("Benutzername: ");
-                        string loginUsername = Console.ReadLine();
-                        Console.Write("Passwort: ");
-                        string loginPassword = Console.ReadLine();
-                        userManager.Login(loginUsername, loginPassword);
-                        break;
-                    case "3":
-                        userManager.ListUsers();
-                        break;
-                    case "4":
-                        Console.Write("Benutzername: ");
-                        string userToAddCard = Console.ReadLine();
-                        Console.Write("Kartenname: ");
-                        string cardName = Console.ReadLine();
-                        Console.Write("Kartentyp (Monster/Spell): ");
-                        string cardType = Console.ReadLine();
-                        Console.Write("Schaden: ");
-                        int damage = int.Parse(Console.ReadLine());
-                        Console.Write("Element: ");
-                        string element = Console.ReadLine();
-                        break;
-                    case "5":
-                        Console.Write("Benutzername: ");
-                        string userToRemoveCard = Console.ReadLine();
-                        Console.Write("Kartenname: ");
-                        string removeCardName = Console.ReadLine();
-                        userManager.RemoveCardFromUser(userToRemoveCard, removeCardName);
-                        break;
-                    case "6":
-                        Console.Write("Benutzername: ");
-                        string userToShowCards = Console.ReadLine();
-                        userManager.ShowUserCards(userToShowCards);
-                        break;
-                    case "7":
-                        exit = true;
-                        break;
-                    default:
-                        Console.WriteLine("Ungültige Auswahl.");
-                        break;
-                }
+                /*  switch (input)
+                  {
+                      case "1":
+                          Console.Write("Benutzername: ");
+                          string regUsername = Console.ReadLine();
+                          Console.Write("Passwort: ");
+                          string regPassword = Console.ReadLine();
+                          userManager.Register(regUsername, regPassword);
+                          break;
+                      case "2":
+                          Console.Write("Benutzername: ");
+                          string loginUsername = Console.ReadLine();
+                          Console.Write("Passwort: ");
+                          string loginPassword = Console.ReadLine();
+                          userManager.Login(loginUsername, loginPassword);
+                          break;
+                      case "3":
+                          userManager.ListUsers();
+                          break;
+                      case "4":
+                          Console.Write("Benutzername: ");
+                          string userToAddCard = Console.ReadLine();
+                          Console.Write("Kartenname: ");
+                          string cardName = Console.ReadLine();
+                          Console.Write("Kartentyp (Monster/Spell): ");
+                          string cardType = Console.ReadLine();
+                          Console.Write("Schaden: ");
+                          int damage = int.Parse(Console.ReadLine());
+                          Console.Write("Element: ");
+                          string element = Console.ReadLine();
+                          break;
+                      case "5":
+                          Console.Write("Benutzername: ");
+                          string userToRemoveCard = Console.ReadLine();
+                          Console.Write("Kartenname: ");
+                          string removeCardName = Console.ReadLine();
+                          userManager.RemoveCardFromUser(userToRemoveCard, removeCardName);
+                          break;
+                      case "6":
+                          Console.Write("Benutzername: ");
+                          string userToShowCards = Console.ReadLine();
+                          userManager.ShowUserCards(userToShowCards);
+                          break;
+                      case "7":
+                          exit = true;
+                          break;
+                      default:
+                          Console.WriteLine("Ungültige Auswahl.");
+                          break;
+                  }
 
-                Console.WriteLine(); // Zeilenumbruch für bessere Lesbarkeit
+                  Console.WriteLine(); // Zeilenumbruch für bessere Lesbarkeit
+              }*/
+
+            }
             }
         }
     }
-}
