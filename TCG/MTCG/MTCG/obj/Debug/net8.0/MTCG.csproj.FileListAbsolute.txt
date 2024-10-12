@@ -12,3 +12,4 @@ C:\Users\user\Desktop\TCG\TCG\mtcg\MTCG\obj\Debug\net8.0\refint\MTCG.dll
 C:\Users\user\Desktop\TCG\TCG\mtcg\MTCG\obj\Debug\net8.0\MTCG.pdb
 C:\Users\user\Desktop\TCG\TCG\mtcg\MTCG\obj\Debug\net8.0\MTCG.genruntimeconfig.cache
 C:\Users\user\Desktop\TCG\TCG\mtcg\MTCG\obj\Debug\net8.0\ref\MTCG.dll
+C:\Users\user\Desktop\TCG\TCG\mtcg\MTCG\obj\Debug\net8.0\MTCG.sourcelink.json

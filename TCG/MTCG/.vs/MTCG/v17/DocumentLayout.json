@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\TCG\\TCG\\MTCG\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{92D43D36-F87F-4D53-89AB-B33F11C9D417}|MTCG\\MTCG.csproj|c:\\users\\user\\desktop\\tcg\\tcg\\mtcg\\mtcg\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92D43D36-F87F-4D53-89AB-B33F11C9D417}|MTCG\\MTCG.csproj|solutionrelative:mtcg\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{92D43D36-F87F-4D53-89AB-B33F11C9D417}|MTCG\\MTCG.csproj|c:\\users\\user\\desktop\\tcg\\tcg\\mtcg\\mtcg\\models\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{92D43D36-F87F-4D53-89AB-B33F11C9D417}|MTCG\\MTCG.csproj|solutionrelative:mtcg\\models\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{92D43D36-F87F-4D53-89AB-B33F11C9D417}|MTCG\\MTCG.csproj|c:\\users\\user\\desktop\\tcg\\tcg\\mtcg\\mtcg\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92D43D36-F87F-4D53-89AB-B33F11C9D417}|MTCG\\MTCG.csproj|solutionrelative:mtcg\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{92D43D36-F87F-4D53-89AB-B33F11C9D417}|MTCG\\MTCG.csproj|c:\\users\\user\\desktop\\tcg\\tcg\\mtcg\\mtcg\\models\\monstertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92D43D36-F87F-4D53-89AB-B33F11C9D417}|MTCG\\MTCG.csproj|solutionrelative:mtcg\\models\\monstertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{92D43D36-F87F-4D53-89AB-B33F11C9D417}|MTCG\\MTCG.csproj|c:\\users\\user\\desktop\\tcg\\tcg\\mtcg\\mtcg\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92D43D36-F87F-4D53-89AB-B33F11C9D417}|MTCG\\MTCG.csproj|solutionrelative:mtcg\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{92D43D36-F87F-4D53-89AB-B33F11C9D417}|MTCG\\MTCG.csproj|c:\\users\\user\\desktop\\tcg\\tcg\\mtcg\\mtcg\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92D43D36-F87F-4D53-89AB-B33F11C9D417}|MTCG\\MTCG.csproj|solutionrelative:mtcg\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{92D43D36-F87F-4D53-89AB-B33F11C9D417}|MTCG\\MTCG.csproj|c:\\users\\user\\desktop\\tcg\\tcg\\mtcg\\mtcg\\models\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,11 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "MonsterType.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\TCG\\TCG\\MTCG\\MTCG\\Models\\MonsterType.cs",
+              "RelativeDocumentMoniker": "MTCG\\Models\\MonsterType.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\TCG\\TCG\\MTCG\\MTCG\\Models\\MonsterType.cs",
+              "RelativeToolTip": "MTCG\\Models\\MonsterType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T22:57:53.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "UserManager.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\TCG\\TCG\\MTCG\\MTCG\\Models\\UserManager.cs",
               "RelativeDocumentMoniker": "MTCG\\Models\\UserManager.cs",
@@ -38,29 +55,28 @@
               "RelativeToolTip": "MTCG\\Models\\UserManager.cs",
               "ViewState": "AQIAACgAAAAAAAAAAADwv2kAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T21:26:41.941Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-12T21:26:41.941Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Card.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\TCG\\TCG\\mtcg\\MTCG\\Models\\Card.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\TCG\\TCG\\MTCG\\MTCG\\Models\\Card.cs",
               "RelativeDocumentMoniker": "MTCG\\Models\\Card.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\TCG\\TCG\\mtcg\\MTCG\\Models\\Card.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\TCG\\TCG\\MTCG\\MTCG\\Models\\Card.cs",
               "RelativeToolTip": "MTCG\\Models\\Card.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA/AAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAswBIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-12T21:24:14.445Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\TCG\\TCG\\mtcg\\MTCG\\Models\\User.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\TCG\\TCG\\MTCG\\MTCG\\Models\\User.cs",
               "RelativeDocumentMoniker": "MTCG\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\TCG\\TCG\\mtcg\\MTCG\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\TCG\\TCG\\MTCG\\MTCG\\Models\\User.cs",
               "RelativeToolTip": "MTCG\\Models\\User.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAADcAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -69,13 +85,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\TCG\\TCG\\MTCG\\MTCG\\Program.cs",
               "RelativeDocumentMoniker": "MTCG\\Program.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\TCG\\TCG\\MTCG\\MTCG\\Program.cs",
-              "RelativeToolTip": "MTCG\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABFAAAA",
+              "ToolTip": "C:\\Users\\user\\Desktop\\TCG\\TCG\\MTCG\\MTCG\\Program.cs*",
+              "RelativeToolTip": "MTCG\\Program.cs*",
+              "ViewState": "AQIAABAAAAAAAAAAAAAowCQAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-12T21:01:57.583Z",
               "EditorCaption": ""

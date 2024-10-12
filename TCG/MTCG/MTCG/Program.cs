@@ -53,7 +53,6 @@ namespace MonsterCardGame
                         int damage = int.Parse(Console.ReadLine());
                         Console.Write("Element: ");
                         string element = Console.ReadLine();
-                        userManager.AddCardToUser(userToAddCard, new Card(cardName, cardType, damage, element));
                         break;
                     case "5":
                         Console.Write("Benutzername: ");
