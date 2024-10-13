@@ -7,6 +7,7 @@
         public List<Card> Cards { get; set; }  // Sammlung von Karten
         public List<Card> Deck { get; set; }   // Bestes 4-Karten Deck
         public int Coins { get; set; }         // Virtuelle Münzen
+        public int Elo { get; private set; }   // ELO-Wert des Benutzers
 
         public User(string username, string password)
         {
@@ -15,6 +16,30 @@
             Cards = new List<Card>();
             Deck = new List<Card>();
             Coins = 20;  // Jeder Benutzer startet mit 20 Münzen
+            Elo = 100;   // Jeder Benutzer startet mit einem ELO von 100
+        }
+
+        // Methode, um Münzen auszugeben
+        public bool SpendCoins(int amount)
+        {
+            if (Coins >= amount)
+            {
+                Coins -= amount;
+                return true;  // Münzen erfolgreich ausgegeben
+            }
+            return false;  // Nicht genügend Münzen
+        }
+
+        // Methode, um das Deck anzuzeigen
+        public List<Card> ShowDeck()
+        {
+            return Deck;
+        }
+
+        // Methode, um zu prüfen, ob das Deck gültig ist
+        public bool HasValidDeck()
+        {
+            return Deck.Count == 4;  // Ein gültiges Deck hat genau 4 Karten
         }
 
         // Karte zur Sammlung hinzufügen
@@ -44,39 +69,22 @@
             return "Deck wurde erfolgreich aktualisiert.";
         }
 
-        // Deck anzeigen
-        public List<Card> ShowDeck()
+        // ELO-Wert erhöhen
+        public void AddElo(int points)
         {
-            return Deck;
+            Elo += points;
         }
 
-        // Überprüfen, ob der Benutzer ein vollständiges Deck hat
-        public bool HasValidDeck()
+        // ELO-Wert verringern
+        public void RemoveElo(int points)
         {
-            return Deck.Count == 4;
+            Elo -= points;
         }
 
         // Karten anzeigen
         public List<Card> ShowCards()
         {
             return Cards;
-        }
-
-        // Münzen abziehen
-        public bool SpendCoins(int amount)
-        {
-            if (Coins >= amount)
-            {
-                Coins -= amount;
-                return true;
-            }
-            return false;
-        }
-
-        // Münzen hinzufügen
-        public void AddCoins(int amount)
-        {
-            Coins += amount;
         }
     }
 }

@@ -8,7 +8,9 @@
         Elf,
         Orc,
         Troll,
-        Knight
+        Knight,
+        Kraken,
+        FireElf
         // Weitere Monster können hier hinzugefügt werden
     }
 }
